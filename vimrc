@@ -38,3 +38,9 @@ if &term =~ "xterm\\|rxvt"
 	      let &t_EI = "\033]12;white\007" 
 	        autocmd VimLeave * :!echo -ne "\033]12;white\007" 
 	endif 
+
+au BufEnter *.hs compiler ghc
+let g:haddock_browser = "/usr/bin/chromium-browser"
+let g:ghc = "usr/bin/ghc"
+let g:haddock_docdir = "/usr/share/doc/ghc-doc/html/"
+
